@@ -1,0 +1,407 @@
+/* =============================================
+   Home Groceries Management & Meal Planner
+   style.css - Global Stylesheet
+   ============================================= */
+
+/* --- RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: #333;
+    background-color: #eceef1;
+}
+
+a {
+    color: #3a6ea5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =============================================
+   PAGE THEMES
+   Login/Register   - warm grey/slate
+   Dashboard        - same as login
+   Groceries/Budget/Shopping - soft blue-grey
+   Meals/Suggestions        - soft warm grey
+   Reports          - same as groceries
+   ============================================= */
+
+body.page-login,
+body.page-register,
+body.page-dashboard {
+    background-color: #7A96B8;
+}
+
+body.page-groceries,
+body.page-budget,
+body.page-shopping,
+body.page-reports {
+    background-color: #899097;
+}
+
+body.page-mealplan,
+body.page-suggestions {
+    background-color: #ebe8e4;
+}
+
+/* --- PAGE WRAPPER --- */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER BAR --- */
+.page-header {
+    background-color: #3a5068;
+    color: white;
+    padding: 18px 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header h2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.page-header a {
+    color: white;
+    background-color: #2c3e50;
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.page-header a:hover {
+    background-color: #1a252f;
+    text-decoration: none;
+}
+
+/* --- CARDS --- */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 22px 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e0e4ea;
+}
+
+.card h3 {
+    font-size: 17px;
+    color: #3a5068;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dde3ea;
+}
+
+/* --- MESSAGES --- */
+.msg-success {
+    background-color: #eaf4ea;
+    color: #2d6a2d;
+    border-left: 5px solid #4caf50;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.msg-error {
+    background-color: #fdf0f0;
+    color: #b71c1c;
+    border-left: 5px solid #e57373;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.msg-warning {
+    background-color: #fdf8ee;
+    color: #7d5a00;
+    border-left: 5px solid #ffb74d;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* --- FORMS --- */
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form input[type="email"],
+form input[type="date"],
+form select {
+    width: 100%;
+    max-width: 400px;
+    padding: 9px 12px;
+    border: 1px solid #c8cdd4;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    background-color: #fafbfc;
+    color: #333;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #3a5068;
+    outline: none;
+    background-color: #fff;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    padding: 9px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-green {
+    background-color: #3a6ea5;
+    color: white;
+}
+
+.btn-green:hover {
+    background-color: #2c5580;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-red {
+    background-color: #c0392b;
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: #962d22;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-gray {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.btn-gray:hover {
+    background-color: #636e72;
+    color: white;
+    text-decoration: none;
+}
+
+/* --- TABLES --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+table th {
+    background-color: #3a5068;
+    color: white;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e8eaed;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #f5f7fa;
+}
+
+table tr:hover {
+    background-color: #edf1f7;
+}
+
+/* --- STATUS COLORS --- */
+.status-ok     { color: #2d6a2d; font-weight: bold; }
+.status-low    { color: #b71c1c; font-weight: bold; }
+.status-medium { color: #7d5a00; font-weight: bold; }
+.status-gray   { color: #7f8c8d; }
+
+/* --- DASHBOARD WELCOME BOX --- */
+.welcome-box {
+    background-color: #3a5068;
+    color: white;
+    padding: 22px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.welcome-box h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.welcome-box p {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* --- DASHBOARD QUICK LINKS --- */
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.quick-links a {
+    background-color: #3a5068;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 140px;
+}
+
+.quick-links a:hover {
+    background-color: #2c3e50;
+    text-decoration: none;
+}
+
+.quick-links a.logout {
+    background-color: #7f8c8d;
+}
+
+.quick-links a.logout:hover {
+    background-color: #636e72;
+}
+
+/* --- LOGIN / REGISTER PAGE --- */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid #dde3ea;
+}
+
+.login-box h2 {
+    color: #3a5068;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-box p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* --- MEAL SUGGESTION CARDS --- */
+.suggestion-card {
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    border: 1px solid #e0e4ea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suggestion-card:hover {
+    background-color: #f0f4f8;
+}
+
+.meal-info h3 {
+    font-size: 16px;
+    color: #3a5068;
+    margin-bottom: 6px;
+}
+
+.meal-badge {
+    font-size: 12px;
+    color: #555;
+    background-color: #edf1f7;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid #c8cdd4;
+}
+
+.meal-count {
+    text-align: center;
+    background-color: #3a5068;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 16px;
+    min-width: 70px;
+}
+
+.meal-count .number {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+
+.meal-count .label {
+    font-size: 11px;
+    opacity: 0.85;
+}
+
+/* --- EMPTY STATE --- */
+.empty-state {
+    text-align: center;
+    padding: 30px 20px;
+    color: #777;
+}
+
+.empty-state p {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e0e4ea;
+    margin: 20px 0;
+}

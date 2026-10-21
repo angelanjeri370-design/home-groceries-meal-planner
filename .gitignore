@@ -1,0 +1,10 @@
+# Private database configuration
+config.php
+
+# Local environment settings
+.env
+
+# Dependencies and temporary files
+vendor/
+node_modules/
+*.log
